@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <h3><b>B</b>ody <b>M</b>ass <b>I</b>ndex Calculator</h3>
-<form class="form" id="form" onsubmit="return validateForm()">
 
-<input type="text" class="text-input" id="height" required>
-<p class="text">Height (cm)</p>
-<input type="text" class="text-input" id="weight" required>
-<p class="text">Weight (kg)</p>
-<button type="button" id="submit">Submit</button>
-</form>
+<div class="form">
+  <div style="margin-left: 70px;">
+<input type="number" class="text-input" id="height" required placeholder="Height (cm)">
+
+<input type="number" class="text-input" id="weight" required placeholder="Weight (kg)">
+</div>
+<button type="submit" onclick="Calculate()" class="submit">Calculate BMI</button>
+
+</div>
+<div style="margin-left: auto;margin-right: auto; width: 400px;">
+<div class="bmi-value">
+  <h4>BMI Value: </h4>
+  <div id="bmi-output"></div>
+</div>
+<div class="status">
+  <h4>Status: </h4>
+  <div id="bmi-status"></div>
+</div>  </div> 
 </body>
 </html>
